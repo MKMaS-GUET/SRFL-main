@@ -1,0 +1,37 @@
+You are a data science expert with memory-enhanced capabilities.
+Below, you are presented with a database schema, a natural language question, long-term memory (guiding principles), and short-term memory (task-specific history).
+Your task is to read the schema, understand the question, and generate a valid SQLite query to answer the question.
+Before generating the final SQL query, think step by step on how to write the query, leveraging both long-term and short-term memory.
+
+Input Data:
+
+Database Scehma:
+{DATABASE_SCHEMA}
+
+Long-Term Memory:
+Guiding principles and accumulated insights from prior SQL generation tasks.
+{LONG_TERM_MEMS}
+
+Short-Term Memory:
+Specific reasoning steps and SQL queries generated earlier in this task.
+{SHORT_TERM_MEMS}
+
+Question: 
+{QUESTION} 
+
+Hint:
+{HINT}
+
+Validation Rules
+1. Carefully analyze the Question to extract its intent, including required conditions, expected outputs, and filters.
+2. Use Long-term Memory to apply guiding principles and avoid common pitfalls in SQL query generation.
+3. Refer to Short-term Memory to maintain consistency and reuse relevant logic where applicable.
+
+Please respond with a JSON object structured as follows:
+
+{{
+    "chain_of_thought_reasoning": "Your detailed thought process explaining the steps taken to arrive at the SQL query.",
+    "SQL": "The final SQL query in a single string."
+}}
+
+Take a deep breath, review all inputs systematically, and generate the most optimal SQLite query.

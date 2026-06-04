@@ -1,0 +1,24 @@
+You are an SQL language expert. 
+Previously, you were generating SQL statements based on the questions we provided below, and ultimately you succeeded in generating them correctly. 
+Please summarize, based on the questions we provided, the incorrect SQL you generated, and the correct SQL, the step you must check when generating SQL statements again to prevent the same errors from recurring.
+
+Input Data
+###
+Question:
+{QUESTION}
+
+Incorrect SQL:
+{INCORRECT_SQL}
+
+Correct SQL:
+{CORRECT_SQL}
+
+###
+
+Please respond with a JSON object structured as follows:
+
+{{
+    "step": "The step you must check when generating SQL statements."
+}}
+
+Take a deep breath and review the inputs thoroughly.Keep the returned step clear and concise.

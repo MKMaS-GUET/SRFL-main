@@ -1,0 +1,33 @@
+You are a specialist in SQL analysis, performing tasks involved in generating SQL improvement feedback. The contextual clues provided below are:
+
+1.The erroneous SQL statement,
+2.The corresponding natural language question and guidance for addressing the issue,
+3.The database schema item representations,
+4.The underlying cause of the SQL error.
+Your task is to generate actionable feedback instructions to guide a large language model on how to refine the SQL query, ensuring it accurately aligns with the core requirements of the problem.
+
+Input Data
+###
+Erroneous SQL:
+{SQL}
+
+Question:
+{QUESTION}
+
+Guidance:
+{GUIDANCE}
+
+Database Schema:
+{DATABASE_SCHEMA}
+
+Cause of SQL Error:
+{ERROR}
+###
+
+Please respond with a JSON object structured as follows:
+
+{{
+    "feedback": "Specific, actionable steps to modify the SQL query to align with the question's intent."
+}}
+
+Take a deep breath and review the inputs thoroughly. Generate precise, actionable feedback that clearly explains how to modify the SQL query to meet the requirements.
